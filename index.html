@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douman dron</title>
+   <link rel="stylesheet" href="style\styles.css">
+   <link rel="stylesheet" href="images/logo_doumandron.png">
+</head>
+<body>
+     <style>
+        /* Style du conteneur du logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: transparent;
+        }
+
+        /* Style de l'image du logo */
+        .logo img {
+           height: 250px; /* Taille du logo */
+            width: 400px;  /* Garde les proportions */
+           margin-top: -50px; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Conteneur du logo -->
+    
+
+   
+   <div class="main">
+        <div class="navbar">
+           <div class="icon">
+            <!--h2 class="logo">Douman Dron</h2-->
+            <header class="logo">
+        <img src="images/logo_website.png" alt="Logo du site">
+        <!--span>Nom du Site</span-->
+    </header>
+           </div>
+
+           <div class="menu-m">
+                <ul>
+                  <li><a href="index.html">ACCEUIL</a></li>
+
+                  <li><a href="A propos.html">A PROPOS</a></li>
+
+                  <li><a href="restaurant.html">RESTAURANTS</a></li>
+                 
+                  <!--li><a href="contact.html">Contacts</a></li-->
+                </ul>
+                
+           </div>
+
+
+          
+
+
+        </div>
+        <div class="content">
+          <h1> Bienvenue<br><span>Sur Notre Site</span></h1>  
+          <p class="par">EXplorez et Découvrez<br> tous vos restaurants préférés à Bamako <br>avec toutes les informations nécessaires!</p>
+          <p>Nous vous invitons à aller découvrir tous les magnifiques restaurants que <br> nous vous proposons dans la barre des menus et dans la partie Restaurants</p>
+          <!--buttom class="cn"><a href="">Nous joindre</a></buttom-->
+        </div>
+   </div>
+   
+</body>
+<header>
+    <h1>Contactez-nous</h1>
+</header>
+
+<div class="containerr">
+    <!-- Informations du site -->
+    <div class="contact-info">
+        <h2>Nos coordonnées</h2>
+        <p><strong>Adresse :</strong> 123 Rue Exemple, Ville, Pays</p>
+        <p><strong>Téléphone :</strong> +223 70 00 00 00</p>
+        <p><strong>Email :</strong> contact@monsite.com</p>
+        <p><strong>Horaires :</strong> Lun - Ven : 9h - 18h</p>
+    </div>
+
+    <!-- Formulaire de contact -->
+    <div class="contact-form">
+        <h2>Envoyer un message</h2>
+        <form action="#" method="post">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</div>
+<style>
+    /*body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }*/
+
+    .avis-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .avis {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        max-width: 300px;
+        flex: 1 1 250px;
+        transition: transform 0.2s ease;
+    }
+
+    .avis:hover {
+        transform: translateY(-5px);
+    }
+
+    .photo-client {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .nom-client {
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 5px;
+    }
+
+    .note {
+        color: #f39c12;
+        margin-bottom: 10px;
+    }
+
+    .commentaire {
+        font-size: 0.95em;
+        color: #555;
+        line-height: 1.4;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .avis-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+
+
+<h1>Les avis que nous récévons de la part des visiteurs du site </h1>
+
+<div class="avis-container">
+    <div class="avis">
+        <img src="images/tolo.jpeg" alt="Client 1" class="photo-client">
+        <div class="nom-client">Hawa Tolo</div>
+        <div class="note">★★★★★</div>
+        <div class="commentaire">
+            Service impeccable, livraison rapide et produit conforme à mes attentes. Je recommande vivement !
+        </div>
+    </div>
+
+    <div class="avis">
+        <img src="images/konde.jpeg" alt="Client 2" class="photo-client">
+        <div class="nom-client">Aissata kondé</div>
+        <div class="note">★★★★☆</div>
+        <div class="commentaire">
+            Très bon rapport qualité-prix. Le service client est réactif et à l'écoute.
+        </div>
+    </div>
+
+    <div class="avis">
+        <img src="images/djene.jpeg" alt="Client 3" class="photo-client">
+        <div class="nom-client">Djeneba Sidibé</div>
+        <div class="note">★★★★★</div>
+        <div class="commentaire">
+            J'adore !Les restaurants sont magnifiques et il y'a tous les renseignements dont j'avais besoin. Merci !
+        </div>
+    </div>
+     <div class="avis">
+        <img src="images/neva.jpeg" alt="Client 3" class="photo-client">
+        <div class="nom-client">Neva</div>
+        <div class="note">★★★★★</div>
+        <div class="commentaire">
+            Les touristes ce site est parfait pour vous!! ça m'a vraiment rendu un grand service.
+        </div>
+    </div>
+</div>
+
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 200vh; /* Juste pour montrer le scroll */
+        }
+
+        footer {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: orange;
+              font-size: 20px;
+            border-radius: 5px;
+        }
+
+        footer a {
+            color: #0b5576;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+    <footer>
+        &copy; 2026 MonSite.com — <a href="A propos.html">Mentions légales</a>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+  
+ 
+
