@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+   <a href="index.html" class="btn-home">🏠 Retour à l'accueil</a>
+          
+<style>
+   /* body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f8f9fa;
+    }*/
+
+    h2 {
+        color: #333;
+    }
+
+    .search-box {
+        display: flex;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .search-box input {
+        
+        padding: 10px;
+        border: 2px solid #e0930c;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+
+    .search-box button {
+        background-color: #ff9500;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .search-box button:hover {
+        background-color: #b36800;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background: white;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .no-result {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h2>Recherche de restaurants</h2>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tapez un nom ou un type de cuisine...">
+    <button onclick="searchRestaurant()">🔍</button>
+</div>
+
+<ul id="restaurantList">
+    <li>SOFIA Patisserie Boulangerie Fast-Food Bamako, Sebenikoro</li>
+    <li>SUKAL Restaurant Bamako, ACI 2000</li>
+    <li>SKY_BUFFET  Service de Buffet Bamako, ACI 2000</li>
+    <li>NICE_CREAM Patisserie-Glacier Bamako,Korofina</li>
+    <li>Baguette D'or Patisserie Bamako, Badalabougou</li>
+    <li>MISANA Buffet à volonté Bamako,Golf </li>
+    <li>DarNass Restaurant Africain Bamako, Faladjè</li>
+    <li>iKaNa Buffet à volonté Bamako,Djicoroni</li>
+    <li>BURGER&CO Fast Food Bamako,Sirakoro</li>
+    <li>Arbab_Chicken Restaurant kfc Bamako,Lafiabougou</li>
+    <li>Au Bord De L'eau Restaurant ouvert Bamako,Kanadjikila</li>
+</ul>
+
+<p id="noResult" class="no-result" style="display:none;">Aucun restaurant trouvé.</p>
+
+<script>
+function searchRestaurant() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+    const list = document.getElementById("restaurantList").getElementsByTagName("li");
+    let found = false;
+
+    for (let i = 0; i < list.length; i++) {
+        const text = list[i].textContent.toLowerCase();
+        if (text.includes(input)) {
+            list[i].style.display = "";
+            found = true;
+        } else {
+            list[i].style.display = "none";
+        }
+    }
+
+    document.getElementById("noResult").style.display = found ? "none" : "block";
+}
+
+// Recherche en temps réel
+document.getElementById("searchInput").addEventListener("keyup", searchRestaurant);
+</script>
+
+</body>
+</html>
+
+    <h1>Entrez ,respirez ,laissez-vous emporter par la magie des lieux et la beauté des plats!!</h1>
+    <div class="carte">
+        <img src="images/sofia.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">SOFIA</h3>
+            <p class="carte-description">
+                Patisserie Boulangerie Fast-Food <br>
+                📍Bamako, Sébénikoro📍 <br>
+                Ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_sofia.html" class="carte-button">Menu🍽️</a>
+        </div>
+       
+    </div>
+    <div class="carte">
+        
+        <img src="images/sukal.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">SUKAL</h3>
+            <p class="carte-description">
+               Restaurant <br>
+               📍Bamako, ACI 2000📍 <br>
+               Ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_sukal.html" class="carte-button">Menu🍽️</a>
+        </div>
+        
+    </div>
+    <div class="carte">
+       
+        <img src="images/skybuffet.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">SKY_BUFFET</h3>
+            <p class="carte-description">
+               Service de Buffet <br>
+               📍Bamako, ACI 2000📍 <br>
+               Ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_sky.html" class="carte-button">Menu🍽️</a>
+        </div>
+       
+    </div>
+    <div class="carte">
+        
+        <img src="images/nicecream.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">NICE_CREAM</h3>
+            <p class="carte-description">
+                Patisserie-Glacier <br>
+               📍Bamako,Korofina📍 <br>
+               Ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_nicecream.html" class="carte-button">Menu🍽️</a>
+        </div>
+       
+    </div>
+    <div class="carte">
+        
+        <img src="images/misana.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">MISANA</h3>
+            <p class="carte-description">
+                📍Bamako, Golf📍<br>
+                ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_misana.html" class="carte-button">Menu🍽️</a>
+        </div>
+       
+    </div>
+    <div class="carte">
+        
+        <img src="images/ikana.jpeg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">iKaNa</h3>
+            <p class="carte-description">
+                📍Bamako,Djicoroni📍<br>
+                ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_ikana.html" class="carte-button">Menu🍽️</a>
+        </div>
+       
+    </div>
+    <div class="carte">
+       
+        <img src="images/darNass.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">DarNass</h3>
+            <p class="carte-description">
+                📍Bamako, Faladjè📍<br>
+                ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_darnass.html" class="carte-button">Menu🍽️</a>
+        </div>
+        
+    </div>
+    <div class="carte">
+       
+        <img src="images/burger&co.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">BURGER&CO</h3>
+            <p class="carte-description">
+                📍Bamako,Sirakoro📍<br>
+                ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_burger.html" class="carte-button">Menu🍽️</a>
+        </div>
+        
+    </div>
+    <div class="carte">
+        
+        <img src="images/arbabchicken.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">Arbab_Chicken</h3>
+            <p class="carte-description">
+                Restaurant kfc <br>
+                📍Bamako,Lafiabougou📍<br>
+                 ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_arbab.html" class="carte-button">Menu🍽️</a>
+        </div>
+        
+    </div>
+    <div class="carte">
+        
+        <img src="images/au_bord_de_leau.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">Au Bord De L'eau</h3>
+            <p class="carte-description">
+                 Restaurant ouvert <br>
+            📍Bamako,Kanadjikila📍 <br>
+                 ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_aubordeleau.html" class="carte-button">Menu🍽️</a>
+        </div>
+       
+    </div>
+    <div class="carte">
+        
+        <img src="images/baguette_dor.jpg" alt="Image d'information">
+        <div class="carte-content">
+            <h3 class="carte-title">Baguette D'or</h3>
+            <p class="carte-description">
+                Patisserie <br>
+                📍Bamako, Badalabougou📍 <br>
+               Ouvert 7j/7 24h/24
+            </p>
+            <a href="menu_baguettedor.html" class="carte-button">Menu🍽️</a>
+        </div>
+        
+    </div>
+</body>
+</html>
