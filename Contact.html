@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="container">
+
+            <header>
+                <div class="logo"><img src="images/logo.png" alt=""></div>
+
+                <nav>
+                    <a href="index.html">Accueil</a>
+                    <a href="restaurant.html">Restaurant</a>
+                    <a href="A propos.html">A propos</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <div class="menu">☰</div>
+            </header>
+            <style>
+                .container{
+    border-radius:10px;
+    padding:40px 60px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    overflow:hidden;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+    margin-left: 500px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#555;
+    font-size:20px;
+}
+
+nav a:hover{
+    color:#d9a93a;
+}
+.logo {
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            
+        }
+
+        /* Style de l'image du logo */
+        .logo img {
+           height: 100px; /* Taille du logo */
+            width: 100px;  /* Garde les proportions */
+           /*margin-top: -100px; */
+        }
+            </style>
+    
+   <section class="contact">
+
+    <div class="contact-title">
+        <h1>Contactez-Nous</h1>
+        <p>
+            Une question, une suggestion ou une demande de collaboration ?
+            N'hésitez pas à nous contacter.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Informations -->
+
+        <div class="contact-info">
+
+            <h2>Nos Coordonnées</h2>
+
+            <div class="info-box">
+                <span>📍</span>
+                <div>
+                    <h3>Adresse</h3>
+                    <p>Bamako, Mali</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <span>📞</span>
+                <div>
+                    <h3>Téléphone</h3>
+                    <p>+223 XX XX XX XX</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <span>✉️</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>contact@doumandron.com</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <!-- Formulaire -->
+
+        <div class="contact-form">
+
+            <form>
+
+                <input type="text" placeholder="Votre nom" required>
+
+                <input type="email" placeholder="Votre email" required>
+
+                <input type="text" placeholder="Sujet">
+
+                <textarea rows="6"
+                    placeholder="Votre message"></textarea>
+
+                <button type="submit">
+                    Envoyer le Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo et description -->
+
+        <div class="footer-box">
+
+            <h2>Douman Dron</h2>
+
+            <p>
+                Douman Dron est une plateforme de découverte et de commande
+                de repas auprès des meilleurs restaurants de Bamako.
+            </p>
+
+        </div>
+
+        <!-- Liens rapides -->
+
+        <div class="footer-box">
+
+            <h3>Liens Rapides</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="restaurant.html">Restaurants</a></li>
+                <li><a href="A propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+        
+        <!-- Réseaux sociaux -->
+
+        <div class="footer-box">
+
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Douman Dron | Tous droits réservés.
+        </p>
+
+        <p>
+            Développé par l'équipe Douman Dron
+        </p>
+
+    </div>
+
+</footer>
+
+</section>
+<style>
+    .contact{
+    padding:100px 10%;
+    background:#f8f8f8;
+}
+
+.contact-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.contact-title h1{
+    font-size:50px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.contact-title p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.contact-info h2{
+    color:#d9a93a;
+    margin-bottom:30px;
+}
+
+.info-box{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.info-box span{
+    font-size:35px;
+}
+
+.info-box h3{
+    color:#222;
+    margin-bottom:5px;
+}
+
+.info-box p{
+    color:#666;
+}
+
+.social-links{
+    margin-top:30px;
+}
+
+.social-links a{
+    display:inline-block;
+    margin-right:10px;
+    text-decoration:none;
+    background:#d9a93a;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+}
+
+.contact-form{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#d9a93a;
+}
+
+.contact-form button{
+    background:#d9a93a;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-title h1{
+        font-size:35px;
+    }
+
+}
+
+
+.footer{
+    background:#1f1f1f;
+    color:white;
+    padding-top:20px;
+}
+
+.footer-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    /*padding-bottom:40px;*/
+}
+
+.footer-box h2,
+.footer-box h3{
+    color:#d9a93a;
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box ul li{
+    margin-bottom:10px;
+}
+
+.footer-box ul li a{
+    text-decoration:none;
+    color:#ccc;
+    transition:0.3s;
+}
+
+.footer-box ul li a:hover{
+    color:#d9a93a;
+    padding-left:5px;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:#d9a93a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-5px);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+    }
+</style>
+</body>
+</html>
