@@ -4,269 +4,580 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/styles.css">
+   
 </head>
 <body>
-   <a href="index.html" class="btn-home">🏠 Retour à l'accueil</a>
-          
-<style>
-   /* body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        background-color: #f8f9fa;
-    }*/
-
-    h2 {
-        color: #333;
-    }
-
-    .search-box {
-        display: flex;
-        max-width: 400px;
-        margin-bottom: 20px;
-    }
-
-    .search-box input {
-        
-        padding: 10px;
-        border: 2px solid #e0930c;
-        border-radius: 4px 0 0 4px;
-        outline: none;
-    }
-
-    .search-box button {
-        background-color: #ff9500;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .search-box button:hover {
-        background-color: #b36800;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    li {
-        background: white;
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .no-result {
-        color: red;
-        font-weight: bold;
-    }
-</style>
-</head>
-<body>
-
-<h2>Recherche de restaurants</h2>
-
-<div class="search-box">
-    <input type="text" id="searchInput" placeholder="Tapez un nom ou un type de cuisine...">
-    <button onclick="searchRestaurant()">🔍</button>
-</div>
-
-<ul id="restaurantList">
-    <li>SOFIA Patisserie Boulangerie Fast-Food Bamako, Sebenikoro</li>
-    <li>SUKAL Restaurant Bamako, ACI 2000</li>
-    <li>SKY_BUFFET  Service de Buffet Bamako, ACI 2000</li>
-    <li>NICE_CREAM Patisserie-Glacier Bamako,Korofina</li>
-    <li>Baguette D'or Patisserie Bamako, Badalabougou</li>
-    <li>MISANA Buffet à volonté Bamako,Golf </li>
-    <li>DarNass Restaurant Africain Bamako, Faladjè</li>
-    <li>iKaNa Buffet à volonté Bamako,Djicoroni</li>
-    <li>BURGER&CO Fast Food Bamako,Sirakoro</li>
-    <li>Arbab_Chicken Restaurant kfc Bamako,Lafiabougou</li>
-    <li>Au Bord De L'eau Restaurant ouvert Bamako,Kanadjikila</li>
-</ul>
-
-<p id="noResult" class="no-result" style="display:none;">Aucun restaurant trouvé.</p>
-
-<script>
-function searchRestaurant() {
-    const input = document.getElementById("searchInput").value.toLowerCase().trim();
-    const list = document.getElementById("restaurantList").getElementsByTagName("li");
-    let found = false;
-
-    for (let i = 0; i < list.length; i++) {
-        const text = list[i].textContent.toLowerCase();
-        if (text.includes(input)) {
-            list[i].style.display = "";
-            found = true;
-        } else {
-            list[i].style.display = "none";
-        }
-    }
-
-    document.getElementById("noResult").style.display = found ? "none" : "block";
+    <style>
+        .restaurants{
+    padding:100px 8%;
+    background:#f8f8f8;
 }
 
-// Recherche en temps réel
-document.getElementById("searchInput").addEventListener("keyup", searchRestaurant);
-</script>
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-</body>
-</html>
+.title h1{
+    font-size:50px;
+    color:#222;
+}
 
-    <h1>Entrez ,respirez ,laissez-vous emporter par la magie des lieux et la beauté des plats!!</h1>
-    <div class="carte">
-        <img src="images/sofia.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">SOFIA</h3>
-            <p class="carte-description">
-                Patisserie Boulangerie Fast-Food <br>
-                📍Bamako, Sébénikoro📍 <br>
-                Ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_sofia.html" class="carte-button">Menu🍽️</a>
+.title p{
+    color:#666;
+    margin-top:10px;
+}
+
+.restaurant-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.restaurant-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.restaurant-card:hover{
+    transform:translateY(-10px);
+}
+
+.restaurant-card img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.restaurant-info{
+    padding:20px;
+}
+
+.restaurant-info h3{
+    margin-bottom:10px;
+    color:#222;
+}
+
+.restaurant-info p{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.restaurant-info span{
+    color:#777;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.bottom a{
+    text-decoration:none;
+    background:#d9a93a;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+}
+
+
+
+.footer{
+    background:#1f1f1f;
+    color:white;
+    padding-top:20px;
+}
+
+.footer-container{
+    width:90%;
+   margin:auto;
+   display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    /*padding-bottom:10px;*/
+}
+
+.footer-box h2,
+.footer-box h3{
+    color:#d9a93a;
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box ul li{
+    margin-bottom:10px;
+}
+
+.footer-box ul li a{
+    text-decoration:none;
+    color:#ccc;
+    transition:0.3s;
+}
+
+.footer-box ul li a:hover{
+    color:#d9a93a;
+    padding-left:5px;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:#d9a93a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-5px);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+}
+    </style>
+    <div class="container">
+
+            <header>
+                <div class="logo"><img src="images/logo.png" alt=""></div>
+
+                <nav>
+                    <a href="index.html">Accueil</a>
+                    <a href="restaurant.html">Restaurant</a>
+                    <a href="A propos.html">A propos</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <div class="menu">☰</div>
+            </header>
+             <style>
+                .container{
+    border-radius:10px;
+    padding:40px 60px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    overflow:hidden;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+    margin-left: 500px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#555;
+    font-size:20px;
+}
+
+nav a:hover{
+    color:#d9a93a;
+}
+.logo {
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            
+        }
+
+        /* Style de l'image du logo */
+        .logo img {
+           height: 100px; /* Taille du logo */
+            width: 100px;  /* Garde les proportions */
+           /*margin-top: -100px; */
+        }
+            </style>
+  <section class="restaurants">
+
+    <div class="title">
+        <h1>Nos Restaurants Partenaires</h1>
+        <p>Découvrez les meilleurs restaurants de Bamako.</p>
+    </div>
+
+    <div class="restaurant-container">
+
+        <!-- Restaurant 1 -->
+        <div class="restaurant-card">
+
+            <img src="images/darNass.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>DarNass</h3>
+
+                <p>
+                    Cuisine malienne et africaine.
+                </p>
+
+                <span>📍 ACI 2000, Bamako</span>
+
+                <div class="bottom">
+                    <span>⭐ 4</span>
+
+                    <a href="menu_darnass.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
         </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-card">
+
+            <img src="images/sukal.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Sukal</h3>
+
+                <p>
+                   Restaurant Mixe
+                </p>
+
+                <span>📍ACI 2000, Bamako</span>
+
+                <div class="bottom">
+                    <span>⭐ 4.5</span>
+
+                    <a href="menu_sukal.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Répétez jusqu'à 12 restaurants -->
+ <div class="restaurant-card">
+
+            <img src="images/sofia.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Sofia</h3>
+
+                <p>
+                    Boulangérie, Patissérie et Fast-Food
+                </p>
+
+                <span>📍 Sébénikoro, Bamako</span>
+
+                <div class="bottom">
+                    <span>⭐ 5</span>
+
+                    <a href="menu_sofia.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/skybuffet.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Sky Buffet</h3>
+
+                <p>
+                   Service de buffet et espace événementielle
+                </p>
+
+                <span>📍ACI 2000 , Bamako</span>
+
+                <div class="bottom">
+                    <span>⭐ 5</span>
+
+                    <a href="menu_sky.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/nicecream.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>NiceCream</h3>
+
+                <p>
+                    Patissérie et Glacier
+                </p>
+
+                <span>📍 Aci 2000, Bamako</span>
+
+                <div class="bottom">
+                    <span>⭐ 4</span>
+
+                    <a href="menu_nicecream.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/misana.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Misana</h3>
+
+                <p>
+                   Service Buffet
+                </p>
+
+                <span>📍Hamdallaye</span>
+
+                <div class="bottom">
+                    <span>⭐ 3.8</span>
+
+                    <a href="menu_misana.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/burger&co.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Burger&Co</h3>
+
+                <p>
+                   Fast-Food
+                </p>
+
+                <span>📍Aci 2000</span>
+
+                <div class="bottom">
+                    <span>⭐ 4.5</span>
+
+                    <a href="menu_burger.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/arbabchicken.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>ArbabChicken</h3>
+
+                <p>
+                    KFC
+                </p>
+
+                <span>📍Aci 2000</span>
+
+                <div class="bottom">
+                    <span>⭐ 4.3</span>
+
+                    <a href="menu_arbab.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/au_bord_de_leau.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Au bord de l'eau</h3>
+
+                <p>
+                    
+                </p>
+
+                <span>📍Sébénikoro</span>
+
+                <div class="bottom">
+                    <span>⭐ 4</span>
+
+                    <a href="menu_aubordeleau.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/ikana.jpeg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>IkAnA</h3>
+
+                <p>
+                  Buffet à volonté
+                </p>
+
+                <span>📍 Hamdallaye</span>
+
+                <div class="bottom">
+                    <span>⭐ 3.5</span>
+
+                    <a href="menu_ikana.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+         <div class="restaurant-card">
+
+            <img src="images/baguette_dor.jpg" alt="Restaurant">
+
+            <div class="restaurant-info">
+
+                <h3>Baguette d'Or</h3>
+
+                <p>
+                   Boulangérie Patissérie
+                </p>
+
+                <span>📍 Hamdallaye</span>
+
+                <div class="bottom">
+                    <span>⭐ 4.6</span>
+
+                    <a href="menu_baguettedor.html">
+                        Voir le Menu
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo et description -->
+
+        <div class="footer-box">
+
+            <h2>Douman Dron</h2>
+
+            <p>
+                Douman Dron est une plateforme de découverte et de commande
+                de repas auprès des meilleurs restaurants de Bamako.
+            </p>
+
+        </div>
+
+        <!-- Liens rapides -->
+
+        <div class="footer-box">
+
+            <h3>Liens Rapides</h3>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="restaurant.html">Restaurants</a></li>
+                <li><a href="A propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
        
-    </div>
-    <div class="carte">
-        
-        <img src="images/sukal.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">SUKAL</h3>
-            <p class="carte-description">
-               Restaurant <br>
-               📍Bamako, ACI 2000📍 <br>
-               Ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_sukal.html" class="carte-button">Menu🍽️</a>
+        <!-- Réseaux sociaux -->
+
+        <div class="footer-box">
+
+            <h3>Suivez-nous</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
         </div>
-        
+
     </div>
-    <div class="carte">
-       
-        <img src="images/skybuffet.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">SKY_BUFFET</h3>
-            <p class="carte-description">
-               Service de Buffet <br>
-               📍Bamako, ACI 2000📍 <br>
-               Ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_sky.html" class="carte-button">Menu🍽️</a>
-        </div>
-       
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Douman Dron | Tous droits réservés.
+        </p>
+
+        <p>
+            Développé par l'équipe Douman Dron
+        </p>
+
     </div>
-    <div class="carte">
-        
-        <img src="images/nicecream.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">NICE_CREAM</h3>
-            <p class="carte-description">
-                Patisserie-Glacier <br>
-               📍Bamako,Korofina📍 <br>
-               Ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_nicecream.html" class="carte-button">Menu🍽️</a>
-        </div>
-       
-    </div>
-    <div class="carte">
-        
-        <img src="images/misana.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">MISANA</h3>
-            <p class="carte-description">
-                📍Bamako, Golf📍<br>
-                ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_misana.html" class="carte-button">Menu🍽️</a>
-        </div>
-       
-    </div>
-    <div class="carte">
-        
-        <img src="images/ikana.jpeg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">iKaNa</h3>
-            <p class="carte-description">
-                📍Bamako,Djicoroni📍<br>
-                ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_ikana.html" class="carte-button">Menu🍽️</a>
-        </div>
-       
-    </div>
-    <div class="carte">
-       
-        <img src="images/darNass.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">DarNass</h3>
-            <p class="carte-description">
-                📍Bamako, Faladjè📍<br>
-                ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_darnass.html" class="carte-button">Menu🍽️</a>
-        </div>
-        
-    </div>
-    <div class="carte">
-       
-        <img src="images/burger&co.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">BURGER&CO</h3>
-            <p class="carte-description">
-                📍Bamako,Sirakoro📍<br>
-                ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_burger.html" class="carte-button">Menu🍽️</a>
-        </div>
-        
-    </div>
-    <div class="carte">
-        
-        <img src="images/arbabchicken.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">Arbab_Chicken</h3>
-            <p class="carte-description">
-                Restaurant kfc <br>
-                📍Bamako,Lafiabougou📍<br>
-                 ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_arbab.html" class="carte-button">Menu🍽️</a>
-        </div>
-        
-    </div>
-    <div class="carte">
-        
-        <img src="images/au_bord_de_leau.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">Au Bord De L'eau</h3>
-            <p class="carte-description">
-                 Restaurant ouvert <br>
-            📍Bamako,Kanadjikila📍 <br>
-                 ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_aubordeleau.html" class="carte-button">Menu🍽️</a>
-        </div>
-       
-    </div>
-    <div class="carte">
-        
-        <img src="images/baguette_dor.jpg" alt="Image d'information">
-        <div class="carte-content">
-            <h3 class="carte-title">Baguette D'or</h3>
-            <p class="carte-description">
-                Patisserie <br>
-                📍Bamako, Badalabougou📍 <br>
-               Ouvert 7j/7 24h/24
-            </p>
-            <a href="menu_baguettedor.html" class="carte-button">Menu🍽️</a>
-        </div>
-        
-    </div>
+
+</footer>
+
+</section>
 </body>
 </html>
