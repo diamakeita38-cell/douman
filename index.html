@@ -1,253 +1,524 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Douman dron</title>
-   <link rel="stylesheet" href="style\styles.css">
-   <link rel="stylesheet" href="images/logo_doumandron.png">
-</head>
-<body>
-     <style>
-        /* Style du conteneur du logo */
-        .logo {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: transparent;
-        }
-
-        /* Style de l'image du logo */
-        .logo img {
-           height: 250px; /* Taille du logo */
-            width: 400px;  /* Garde les proportions */
-           margin-top: -50px; 
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
 
-    <!-- Conteneur du logo -->
-    
+    <div class="container">
 
-   
-   <div class="main">
-        <div class="navbar">
-           <div class="icon">
-            <!--h2 class="logo">Douman Dron</h2-->
-            <header class="logo">
-        <img src="images/logo_website.png" alt="Logo du site">
-        <!--span>Nom du Site</span-->
-    </header>
-           </div>
-
-           <div class="menu-m">
-                <ul>
-                  <li><a href="index.html">ACCEUIL</a></li>
-
-                  <li><a href="A propos.html">A PROPOS</a></li>
-
-                  <li><a href="restaurant.html">RESTAURANTS</a></li>
-                 
-                  <!--li><a href="contact.html">Contacts</a></li-->
-                </ul>
-                
-           </div>
-
-
-          
-
-
+        <!-- Navbar -->
+       <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Douman Dron Logo">
         </div>
-        <div class="content">
-          <h1> Bienvenue<br><span>Sur Notre Site</span></h1>  
-          <p class="par">EXplorez et Découvrez<br> tous vos restaurants préférés à Bamako <br>avec toutes les informations nécessaires!</p>
-          <p>Nous vous invitons à aller découvrir tous les magnifiques restaurants que <br> nous vous proposons dans la barre des menus et dans la partie Restaurants</p>
-          <!--buttom class="cn"><a href="">Nous joindre</a></buttom-->
-        </div>
-   </div>
-   
-</body>
-<header>
-    <h1>Contactez-nous</h1>
+
+        <ul class="nav-links">
+            <li><a href="/pages/index.html">Accueil</a></li>
+            <li><a href="/pages/a_propos.html">A propos</a></li>
+            <li><a href="/pages/restaurant.html">Restaurants</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
 </header>
 
-<div class="containerr">
-    <!-- Informations du site -->
-    <div class="contact-info">
-        <h2>Nos coordonnées</h2>
-        <p><strong>Adresse :</strong> 123 Rue Exemple, Ville, Pays</p>
-        <p><strong>Téléphone :</strong> +223 70 00 00 00</p>
-        <p><strong>Email :</strong> contact@monsite.com</p>
-        <p><strong>Horaires :</strong> Lun - Ven : 9h - 18h</p>
-    </div>
+        <!-- Hero Section -->
+        <section class="hero">
 
-    <!-- Formulaire de contact -->
-    <div class="contact-form">
-        <h2>Envoyer un message</h2>
-        <form action="#" method="post">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
+            <div class="hero-image">
+                <div class="circle"></div>
+                <img src="/images/accueil sans backg.png"
+                    alt="Accueil">
+            </div>
 
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
+            <div class="hero-content">
+                <h1>
+                    Bienvenue<br>Sur Notre Site 
+                </h1>  
+                <p>   
+          <p>Retrouvez sur ce site<br> tous vos restaurants préférés à Bamako <br>avec toutes les informations nécessaires!</p>
+          <p>Nous vous invitons à aller découvrir tous les magnifiques restaurants que <br> nous vous proposons dans la barre des menus et dans la partie Restaurants</p>
+                </p>
+            </div>
+             <footer class="footer">
 
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+    <div class="footer-overlay">
 
-            <button type="submit">Envoyer</button>
-        </form>
-    </div>
-</div>
-<style>
-    /*body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        margin: 0;
-        padding: 20px;
-    }
+        <div class="footer-content">
 
-    h1 {
-        text-align: center;
-        color: #333;
-        margin-bottom: 30px;
-    }*/
+            <div class="footer-column">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
 
-    .avis-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
+            <div class="footer-column">
+                <h3>Nos Services</h3>
+                <ul>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Réservation</a></li>
+                    <li><a href="#">Évènements</a></li>
+                    <li><a href="#">Chef Privé</a></li>
+                </ul>
+            </div>
 
-    .avis {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        padding: 20px;
-        max-width: 300px;
-        flex: 1 1 250px;
-        transition: transform 0.2s ease;
-    }
+            <div class="footer-column">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
 
-    .avis:hover {
-        transform: translateY(-5px);
-    }
+            <div class="footer-column">
+                <h3>Douman Dron</h3>
 
-    .photo-client {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
+                <p>📍 Bamako, Mali</p>
+                <p>📞 +223 XX XX XX XX</p>
+                <p>✉️ contact@doumandron.com</p>
 
-    .nom-client {
-        font-weight: bold;
-        color: #444;
-        margin-bottom: 5px;
-    }
+                <div class="social-icons">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">▶️</a>
+                    <a href="#">💬</a>
+                </div>
 
-    .note {
-        color: #f39c12;
-        margin-bottom: 10px;
-    }
+            </div>
 
-    .commentaire {
-        font-size: 0.95em;
-        color: #555;
-        line-height: 1.4;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-        .avis-container {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-</style>
-
-
-
-<h1>Les avis que nous récévons de la part des visiteurs du site </h1>
-
-<div class="avis-container">
-    <div class="avis">
-        <img src="images/tolo.jpeg" alt="Client 1" class="photo-client">
-        <div class="nom-client">Hawa Tolo</div>
-        <div class="note">★★★★★</div>
-        <div class="commentaire">
-            Service impeccable, livraison rapide et produit conforme à mes attentes. Je recommande vivement !
         </div>
+
+        <div class="footer-bottom">
+            <div class="logo-footer">
+                <img src="images/logo-douman-dron.png" alt="Logo">
+            </div>
+
+            <p>
+                © 2026 Douman Dron | Tous droits réservés
+            </p>
+        </div>
+
     </div>
 
-    <div class="avis">
-        <img src="images/konde.jpeg" alt="Client 2" class="photo-client">
-        <div class="nom-client">Aissata kondé</div>
-        <div class="note">★★★★☆</div>
-        <div class="commentaire">
-            Très bon rapport qualité-prix. Le service client est réactif et à l'écoute.
-        </div>
+</footer>
+          
+    </section>
+   
     </div>
-
-    <div class="avis">
-        <img src="images/djene.jpeg" alt="Client 3" class="photo-client">
-        <div class="nom-client">Djeneba Sidibé</div>
-        <div class="note">★★★★★</div>
-        <div class="commentaire">
-            J'adore !Les restaurants sont magnifiques et il y'a tous les renseignements dont j'avais besoin. Merci !
-        </div>
-    </div>
-     <div class="avis">
-        <img src="images/neva.jpeg" alt="Client 3" class="photo-client">
-        <div class="nom-client">Neva</div>
-        <div class="note">★★★★★</div>
-        <div class="commentaire">
-            Les touristes ce site est parfait pour vous!! ça m'a vraiment rendu un grand service.
-        </div>
-    </div>
-</div>
-
-    
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            min-height: 200vh; /* Juste pour montrer le scroll */
-        }
+    {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-        footer {
-            text-align: center;
-            margin-right: auto;
-            margin-left: auto;
-            background-color: orange;
-              font-size: 20px;
-            border-radius: 5px;
-        }
+body{
+    background:#e79d14;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
 
-        footer a {
-            color: #0b5576;
-            text-decoration: none;
-        }
+.container{
+    width:100%;
+    height: 700px;
+    max-width:1400px;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
+/* HEADER */
 
-    <footer>
-        &copy; 2026 MonSite.com — <a href="A propos.html">Mentions légales</a>
-    </footer>
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 50px;
+}
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5%;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    position:relative;
+    width: 1500px;
+    height: 90px;
+}
 
+/* LOGO */
+.logo img{
+    width:140px;
+    height:auto;
+}
+
+/* MENU */
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-size:20px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#e79d14;
+}
+
+
+/* TABLETTE ET MOBILE */
+@media (max-width:768px){
+
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+        padding:20px 0;
+        display:none;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .logo img{
+        width:110px;
+    }
+}
+
+/* PETITS TELEPHONES */
+@media (max-width:480px){
+
+    .navbar{
+        padding:15px;
+    }
+
+    .logo img{
+        width:90px;
+    }
+
+    .nav-links a{
+        font-size:15px;
+    }
+}
+
+
+
+/* HERO */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:500px;
+}
+
+.hero-image{
+    flex:1px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+.circle{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#e79d14;
+    border-radius:50%;
+    left:-200px;
+   
+}
+
+.hero-image img{
+    width:100%;
+    max-width:450px;
+    position:relative;
+    z-index:2;*/
+    border-radius:50%;
+    width: 600px;
+    margin-top: -100px;
+    
+}
+
+.hero-content{
+    flex:1;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    color:#222;
+    line-height:1;
+    margin-left: -250px;
+    margin-top: -10px;
+}
+
+.hero-content p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:30px;
+    max-width:500px;
+    margin-left: -250px;
+    font-size: 1rem;
+}
+/* TABLETTE */
+
+@media(max-width:992px){
+
+    header{
+        padding:20px 30px;
+    }
+
+    nav ul{
+        gap:20px;
+    }
+
+    .hero{
+        padding:40px 30px;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .circle{
+        width:400px;
+        height:400px;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        display:none;
+    }
+
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image{
+        order:1;
+    }
+
+    .hero-content{
+        order:2;
+    }
+
+    .hero-content p{
+        margin:auto;
+        margin-bottom:25px;
+    }
+
+    .hero-content h1{
+        font-size:2.7rem;
+    }
+
+    .hero-content h2{
+        letter-spacing:5px;
+    }
+
+    .circle{
+        width:300px;
+        height:300px;
+        left:-80px;
+    }
+
+    .hero-image img{
+        max-width:300px;
+    }
+}
+
+/* PETITS TELEPHONES */
+
+@media(max-width:480px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .hero{
+        padding:30px 20px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .hero-content h2{
+        font-size:1rem;
+    }
+
+    .hero-content p{
+        font-size:0.9rem;
+    }
+}
+
+.footer{
+    background:url("images/footer-bg.jpg") center center/cover no-repeat;
+    position:relative;
+    color:white;
+}
+
+.footer-overlay{
+    background:rgba(0,0,0,0.75);
+    padding:80px 8% 20px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.footer-column h3{
+    margin-bottom:20px;
+    position:relative;
+}
+
+.footer-column h3::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:60px;
+    height:2px;
+    background:#d4a017;
+}
+
+.footer-column ul{
+    list-style:none;
+}
+
+.footer-column ul li{
+    margin:12px 0;
+}
+
+.footer-column ul li a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-column ul li a:hover{
+    color:#d4a017;
+    padding-left:5px;
+}
+
+.footer-column p{
+    margin:15px 0;
+    color:#ddd;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#d4a017;
+    border-color:#d4a017;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.2);
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo-footer img{
+    width:140px;
+}
+
+.footer-bottom p{
+    color:#ccc;
+}
+
+@media(max-width:992px){
+
+    .footer-content{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer-content{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-column h3::after{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+}
+ </style>
+ 
 </body>
 </html>
-
-
-
-
-
-  
- 
-
